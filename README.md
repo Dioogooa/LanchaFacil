@@ -10,7 +10,7 @@ Core Backend:
 ⬜ CRUD pedidos
 
 Mensageria:
-⬜ Consumer cozinha
+✅ Consumer cozinha
 ⬜ Consumer notificação
 ⬜ Histórico
 ⬜ Retry Queue
