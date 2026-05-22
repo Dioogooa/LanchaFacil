@@ -2,34 +2,34 @@
 ## Status
 
 Core Backend:
-- [x] Entidades JPA
-- [x] Repositories
-- [x] DTOs
-- [x] Services
-- [x] Controllers REST
-- [x] CRUD clientes
-- [x] CRUD pedidos
+- ✅ Entidades JPA
+- ✅ Repositories
+- ✅ DTOs
+- ✅ Services
+- ✅ Controllers REST
+- ✅ CRUD clientes
+- ✅ CRUD pedidos
 
 Mensageria:
-- [x] Consumer de notificacao
-- [x] Historico de eventos
+- ✅ Consumer de notificacao
+- ✅ Historico de eventos
 - [ ] Retry queue
 - [ ] DLQ
 - [ ] Tratamento avancado de erro
 - [ ] Idempotencia
 
 Front-end:
-- [x] React Vite
-- [x] Axios
-- [x] Tela clientes
-- [x] Tela pedidos
-- [x] Tela cozinha
-- [x] Integracao API
+- ✅ React Vite
+- ✅ Axios
+- ✅ Tela clientes
+- ✅ Tela pedidos
+- ✅ Tela cozinha
+- ✅ Integracao API
 
 Emails:
-- [x] Mailtrap
-- [x] Ethereal
-- [x] Spring Mail
-- [x] Servico de email
-- [x] Consumer de notificacao
+- ✅ Mailtrap
+- ✅ Ethereal
+- ✅ Spring Mail
+- ✅ Servico de email
+- ✅ Consumer de notificacao
 
