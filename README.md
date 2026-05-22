@@ -1,33 +1,35 @@
-Missoes a serem feitas
+
+## Status
 
 Core Backend:
-✅ Entidades JPA
-✅ Repositories
-✅ DTOs
-✅ Services
-✅ Controllers REST
-✅ CRUD clientes
-✅ CRUD pedidos
+- [x] Entidades JPA
+- [x] Repositories
+- [x] DTOs
+- [x] Services
+- [x] Controllers REST
+- [x] CRUD clientes
+- [x] CRUD pedidos
 
 Mensageria:
-✅ Consumer cozinha
-⬜ Consumer notificação
-⬜ Histórico
-⬜ Retry Queue
-⬜ DLQ
-⬜ Tratamento de erro
-⬜ Idempotência
+- [x] Consumer de notificacao
+- [x] Historico de eventos
+- [ ] Retry queue
+- [ ] DLQ
+- [ ] Tratamento avancado de erro
+- [ ] Idempotencia
 
-FrontEnd:
-⬜ React Vite
-⬜ Axios
-⬜ Tela clientes
-⬜ Tela pedidos
-⬜ Tela cozinha
-⬜ Integração API
+Front-end:
+- [x] React Vite
+- [x] Axios
+- [x] Tela clientes
+- [x] Tela pedidos
+- [x] Tela cozinha
+- [x] Integracao API
 
 Emails:
-⬜ Mailtrap
-⬜ Spring Mail
-⬜ Serviço email
-⬜ Consumer notificaçã
+- [x] Mailtrap
+- [x] Ethereal
+- [x] Spring Mail
+- [x] Servico de email
+- [x] Consumer de notificacao
+

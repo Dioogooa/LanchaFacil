@@ -1,0 +1,8 @@
+app:
+  mail:
+    provider: ethereal
+
+spring:
+  mail:
+    host: ${MAIL_HOST:smtp.ethereal.email}
+    port: ${MAIL_PORT:587}
