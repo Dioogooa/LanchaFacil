@@ -1,13 +1,13 @@
 Missoes a serem feitas
 
 Core Backend:
-⬜ Entidades JPA
-⬜ Repositories
-⬜ DTOs
-⬜ Services
-⬜ Controllers REST
-⬜ CRUD clientes
-⬜ CRUD pedidos
+✅ Entidades JPA
+✅ Repositories
+✅ DTOs
+✅ Services
+✅ Controllers REST
+✅ CRUD clientes
+✅ CRUD pedidos
 
 Mensageria:
 ✅ Consumer cozinha
