@@ -22,3 +22,5 @@ spring:
 app:
   mail:
     provider: test
+  rabbitmq:
+    reset-topology: false

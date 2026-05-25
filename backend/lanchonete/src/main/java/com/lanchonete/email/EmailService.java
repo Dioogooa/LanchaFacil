@@ -44,6 +44,7 @@ public class EmailService {
             mailSender.send(message);
         } catch (Exception exception) {
             log.error("Falha ao enviar email do pedido {}", evento.pedidoId(), exception);
+            throw exception;
         }
     }
 }

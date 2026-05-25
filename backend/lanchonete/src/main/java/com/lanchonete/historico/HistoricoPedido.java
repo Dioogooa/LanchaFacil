@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -16,6 +17,9 @@ public class HistoricoPedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "event_id", unique = true)
+    private UUID eventId;
 
     @Column(nullable = false)
     private Long pedidoId;

@@ -10,8 +10,11 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.lanchonete.pedido.messaging.PedidoCriadoEvento;
+
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.UUID;
 
 import static com.lanchonete.config.RabbitConfig.EXCHANGE;
 import static com.lanchonete.config.RabbitConfig.RK_PEDIDOS;
@@ -60,7 +63,8 @@ public class PedidoService {
         pedido.setStatus(StatusPedido.RECEBIDO);
         Pedido salvo = pedidoRepository.save(pedido);
 
-        rabbitTemplate.convertAndSend(EXCHANGE, RK_PEDIDOS, PedidoResponse.fromEntity(salvo));
+        UUID eventIdPedido = UUID.randomUUID();
+        rabbitTemplate.convertAndSend(EXCHANGE, RK_PEDIDOS, toPedidoCriadoEvento(eventIdPedido, salvo));
         publicarNotificacao(salvo, "Pedido recebido com sucesso.");
         return PedidoResponse.fromEntity(salvo);
     }
@@ -79,8 +83,25 @@ public class PedidoService {
                 .orElseThrow(() -> new ResourceNotFoundException("Pedido nao encontrado"));
     }
 
+    private PedidoCriadoEvento toPedidoCriadoEvento(UUID eventId, Pedido pedido) {
+        return new PedidoCriadoEvento(
+                eventId,
+                pedido.getId(),
+                pedido.getCliente().getId(),
+                pedido.getCliente().getNome(),
+                pedido.getCliente().getEmail(),
+                pedido.getItem(),
+                pedido.getObservacao(),
+                pedido.getValorTotal(),
+                pedido.getStatus(),
+                pedido.getCriadoEm(),
+                pedido.getAtualizadoEm()
+        );
+    }
+
     private void publicarNotificacao(Pedido pedido, String mensagem) {
         NotificacaoEvento evento = new NotificacaoEvento(
+                UUID.randomUUID(),
                 pedido.getId(),
                 pedido.getCliente().getId(),
                 pedido.getCliente().getNome(),

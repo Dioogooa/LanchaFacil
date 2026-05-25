@@ -1,19 +1,22 @@
-package com.lanchonete.notificacao;
+package com.lanchonete.pedido.messaging;
 
 import com.lanchonete.pedido.StatusPedido;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
-public record NotificacaoEvento(
+public record PedidoCriadoEvento(
         UUID eventId,
-        Long pedidoId,
+        Long id,
         Long clienteId,
         String clienteNome,
         String clienteEmail,
         String item,
+        String observacao,
+        BigDecimal valorTotal,
         StatusPedido status,
-        String mensagem,
-        LocalDateTime dataEvento
+        LocalDateTime criadoEm,
+        LocalDateTime atualizadoEm
 ) {
 }
