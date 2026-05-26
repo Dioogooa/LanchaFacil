@@ -3,7 +3,7 @@
 
 Sistema de gerenciamento de pedidos para lanchonetes, com backend em Spring Boot, mensageria via RabbitMQ, envio de e-mails e frontend em React.
 
-Projeto desenvolvido como parte do programa **Let's Code**.
+Projeto desenvolvido para N2 da matéria de mensageria.
 
 ---
 
