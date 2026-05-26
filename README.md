@@ -33,3 +33,15 @@ Emails:
 - ✅ Servico de email
 - ✅ Consumer de notificacao
 
+### Mailtrap (SMTP — caminho 1)
+
+1. No Mailtrap: **Email Testing** → sua Inbox → **SMTP Settings** (host `sandbox.smtp.mailtrap.io`, porta `2525`, TLS).
+2. Copie `application-local.yml.example` para `application-local.yml` e cole **username** e **password** SMTP (nao use o API token).
+3. Reinicie o backend — o Spring carrega `application-local.yml` automaticamente (arquivo no `.gitignore`).
+
+Alternativa sem arquivo local:
+
+```powershell
+.\scripts\set-mailtrap-env.ps1 -Username "seu_user_smtp" -Password "sua_senha_smtp"
+```
+

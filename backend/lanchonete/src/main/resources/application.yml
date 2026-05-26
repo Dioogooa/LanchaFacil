@@ -1,4 +1,6 @@
 spring:
+  config:
+    import: optional:classpath:application-local.yml
   application:
     name: lanchonete
   datasource:
@@ -14,6 +16,9 @@ spring:
     port: 5672
     username: guest
     password: guest
+    listener:
+      simple:
+        default-requeue-rejected: false
   mail:
     host: ${MAIL_HOST:sandbox.smtp.mailtrap.io}
     port: ${MAIL_PORT:2525}
@@ -35,3 +40,7 @@ server:
 app:
   mail:
     provider: ${APP_MAIL_PROVIDER:mailtrap}
+  rabbitmq:
+    max-retries: 3
+    retry-ttl-ms: 30000
+    reset-topology: true

@@ -22,3 +22,7 @@ spring:
 app:
   mail:
     provider: test
+  rabbitmq:
+    reset-topology: false
+    max-retries: 3
+    retry-ttl-ms: 1000
