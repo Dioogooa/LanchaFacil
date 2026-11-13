@@ -117,10 +117,10 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero-panel">
-        <div className="eyebrow">Lanchonete</div>
+        <div className="eyebrow">Lancha fácil</div>
         <div className="hero-copy">
           <div>
-            <h1>Lanchonete Digas & Cia</h1>
+            <h1>Lancha fácil v1</h1>
            
           </div>
           <div className="status-card">
