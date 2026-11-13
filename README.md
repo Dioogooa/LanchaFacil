@@ -73,6 +73,9 @@ Se o processamento falhar, a mensagem passa por uma fila de **retry** e, depois 
 - Cards de resumo (clientes, pedidos, fila da cozinha e eventos) e barra lateral com o histórico recente
 
 ---
+<img width="2538" height="1297" alt="image" src="https://github.com/user-attachments/assets/0d5d6c81-32a2-455d-8fe1-a7e1640c9a39" />
+<img width="2537" height="1291" alt="image" src="https://github.com/user-attachments/assets/c6f14bb4-b134-4a27-8f2c-b9e4c4b7bf9e" />
+<img width="2537" height="1293" alt="image" src="https://github.com/user-attachments/assets/3958e11a-16c4-48b5-bad5-5a0a9e5f8dba" />
 
 ## 🛠️ Tecnologias
 
